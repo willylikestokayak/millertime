@@ -1,0 +1,11 @@
+Hackathon notes:
+
+	Tracking searches: 
+
+	Alright thinking about this whole thing and what kind of idea we could be using and how we could implement something along the lines of an app. 
+
+	Job searching, looking for jobs and tracking which ones you have applied for, but I want to leave on my boat and not be around instead of looking for a job, things to consider with jobs, also something that will help with applying for a job... personal websites and portfolios? What about inspiration for jobs and places. Something about that is not very inspiring. Can we scrape glassdoor and get the rating of a company? 
+
+	Glassdoor has company reviews, perks, benefits, proximity to things outside (that would be hard)
+
+	Climbers who work, places to work, jobs to have, music for a job search, music during job searching, how to help the job seeker, when new jobs are posted? Companies in the area. That sounds like an interesting one, there's the bayareabiotech guy...
