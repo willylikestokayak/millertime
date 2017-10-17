@@ -3,7 +3,6 @@ var mongoose = require("mongoose");
 var Job = require("../models/job");
 var User = require("../models/user");
 var router = express.Router();
-
 // router.use()
 router.get('/', function(req, res, next) {
   User.create({
@@ -18,27 +17,21 @@ router.get('/', function(req, res, next) {
         skills: "HTML, CSS, JS, React, hipster vibes",
         rating: "Unicorn",
         statusString: "applied",
-
     }, {
         title: "Junior Dev",
         companyName: "FaceBooks",
         skills: "HTML, CSS, JS, React, hipster vibes",
         rating: "Unicorn",
         statusString: "applied",
-
     }, function(err,job){
         if (err) return console.log(err);
         res.send(job);
     })
         
   });
-
-
-
   // Job.find({}, function(err, jobs) {
   //   if (err) return console.log(err);
   //   res.send(jobs);
   // })
 });
-
 module.exports = router;
