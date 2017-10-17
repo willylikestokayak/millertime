@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import JobDetail from "./JobDetail";
 
 class App extends Component {
   constructor(props) {
@@ -19,28 +20,28 @@ class App extends Component {
   render() {
     return (
 <div>
-    <div id="header" class="navbar navbar-default navbar-fixed-top">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                <i class="icon-reorder"></i>
+    <div id="header" className="navbar navbar-default navbar-fixed-top">
+        <div className="navbar-header">
+            <button className="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <i className="icon-reorder"></i>
             </button>
-            <a class="navbar-brand" href="#">
+            <a className="navbar-brand" href="#">
                 Beth Miller Time
             </a>
         </div>
-        <nav class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+        <nav className="collapse navbar-collapse">
+            <ul className="nav navbar-nav">
                 <li>
                     <a href="#">Job Search</a>
                 </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<b class="caret"></b></a>
+                <li className="dropdown">
+                  <a href="#" className="dropdown-toggle" data-toggle="dropdown">Profile<b className="caret"></b></a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li class="dropdown">
-                    <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
-                    <ul class="dropdown-menu pull-right">
+            <ul className="nav navbar-nav pull-right">
+                <li className="dropdown">
+                    <a href="#" id="nbAcctDD" className="dropdown-toggle" data-toggle="dropdown"><i className="icon-user"></i>Username<i className="icon-sort-down"></i></a>
+                    <ul className="dropdown-menu pull-right">
                         <li><a href="#">Log Out</a></li>
                     </ul>
                 </li>
@@ -48,32 +49,33 @@ class App extends Component {
         </nav>
     </div>
     <div id="wrapper">
-      <div id="sidebar-wrapper" class="col-md-2">
+      <div id="sidebar-wrapper" className="col-md-2">
                 <div id="sidebar">
-                    <ul class="nav list-group">
+                    <ul className="nav list-group">
                         <li>
-                            <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 1</a>
+                            <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 1</a>
                         </li>
                         <li>
-                            <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 2</a>
+                            <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 2</a>
                         </li>
                         <li>
-                            <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 9</a>
+                            <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 9</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div id="main-wrapper" class="col-md-10 pull-right">
+            <div id="main-wrapper" className="col-md-10 pull-right">
                 <div id="main">
-                  <div class="page-header">
+                  <div className="page-header">
                     <h3>Admin</h3>
                   </div>
-                  <p>Lorem Ipsum...</p>
+                  {/*PUT THE JOBDETAIL page HERE*/}
+                  <JobDetail obj="sup"/>
                 </div>
 
-                <div class="col-md-12 footer">
-                  <ul class="nav navbar-nav">A Project Inspired by Beth Miller, Cooked Up By: Chad Coker, Brian Conner, Reggie Baker & Tony Bricca</ul>
+                <div className="col-md-12 footer">
+                  <ul className="nav navbar-nav">A Project Inspired by Beth Miller, Cooked Up By: Chad Coker, Brian Conner, Reggie Baker & Tony Bricca</ul>
                 </div>
 
             </div>
