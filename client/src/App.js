@@ -4,6 +4,7 @@ import JobDetail from './JobDetail.js';
 import UserDetail from './UserDetail.js';
 import Headline from './Headline.js';
 import './App.css';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -53,6 +54,47 @@ class App extends Component {
                             <ul className="dropdown-menu pull-right">
                                 <li><a href="#">Log Out</a></li>
                             </ul>
+<div>
+    <div id="header" className="navbar navbar-default navbar-fixed-top">
+        <div className="navbar-header">
+            <button className="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <i className="icon-reorder"></i>
+            </button>
+            <a className="navbar-brand" href="#">
+                Beth Miller Time
+            </a>
+        </div>
+        <nav className="collapse navbar-collapse">
+            <ul className="nav navbar-nav">
+                <li>
+                    <a href="#">Job Search</a>
+                </li>
+                <li className="dropdown">
+                  <a href="#" className="dropdown-toggle" data-toggle="dropdown">Profile<b className="caret"></b></a>
+                </li>
+            </ul>
+            <ul className="nav navbar-nav pull-right">
+                <li className="dropdown">
+                    <a href="#" id="nbAcctDD" className="dropdown-toggle" data-toggle="dropdown"><i className="icon-user"></i>Username<i className="icon-sort-down"></i></a>
+                    <ul className="dropdown-menu pull-right">
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="wrapper">
+      <div id="sidebar-wrapper" className="col-md-2">
+                <div id="sidebar">
+                    <ul className="nav list-group">
+                        <li>
+                            <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 1</a>
+                        </li>
+                        <li>
+                            <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 2</a>
+                        </li>
+                        <li>
+                            <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 9</a>
                         </li>
                     </ul>
                 </nav>
@@ -61,7 +103,6 @@ class App extends Component {
               <div id="sidebar-wrapper" className="col-md-2">
                         <div id="sidebar">
                             <JobList activeJob={this.state.activeJob}/>
-        
                         </div>
                     </div>
         
