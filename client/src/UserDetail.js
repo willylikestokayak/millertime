@@ -18,7 +18,7 @@ class UserDetail extends Component {
 
     },
     this.handleBrandingStatement = this.handleBrandingStatement.bind(this);
-    this.updateBranding = this.updateBranding.bind(this);
+    this.updateUserDetails = this.updateUserDetails.bind(this);
     // console.log("aljfa;ljfa;lgjas; should say beavis .... " + this.state.user.name);
   }
 
@@ -27,7 +27,7 @@ class UserDetail extends Component {
   //  console.log("....................................." + this.state.user.email);
   }
 
-  updateBranding(e){
+  updateUserDetails(e){
     console.log("lkdslfja;ldkfjas;ldkfj" + this.state);
     e.preventDefault()
     var temp;
@@ -48,7 +48,7 @@ class UserDetail extends Component {
     return (
         <div>
             <h1>Keep BethBot happy: evolve your brand and vision</h1>
-            <form onSubmit = {this.updateBranding}>
+            <form onSubmit = {this.updateUserDetails}>
               Update Your Branding Statement:
                 <input type="text" placeholder={this.state.user.brandingStatement} onChange={(e)=> this.handleBrandingStatement(e)} />
                 {/* <input type="text" placeholder='what makes your unicorn'/>     */}

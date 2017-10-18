@@ -23,11 +23,8 @@ class Headline extends Component {
             })
         }
     render() {
-<<<<<<< HEAD
         
-=======
 
->>>>>>> 9c28275fa68d0bba830e068e76e5e3941fe67eac
         return(
             <div id="sidebar">
                 <ul class="nav list-group">
@@ -42,13 +39,10 @@ class Headline extends Component {
                     </li>
                 </ul>
             </div>
-<<<<<<< HEAD
         )    
     }   
-=======
-        )
+       // )
     }
->>>>>>> 9c28275fa68d0bba830e068e76e5e3941fe67eac
-}
+//}
 
 export default Headline;
