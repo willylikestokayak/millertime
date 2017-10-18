@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class JobDetail extends Component {
   constructor(props) {
     super(props)
-    //sibling of jobList.js
+    {/* where are the initial states coming from?? */}
     this.state = {
       value: "",
       name: "Reggie",
@@ -32,8 +32,25 @@ class JobDetail extends Component {
     console.log("receivingPROPS")
   }
 
+  handleChange(e) {
+    this.setState({value: e.target.value});
+  }
+
   handleSubmit(e) {
-    console.log("a submit was made")
+    {/* make the db call to update everything when the button is pressed  */}
+    var data: {
+      title: this.state.userData.title,
+      companyName: this.state.userData.companyName,
+      skills: this.state.userData.skills,
+      rating: this.state.userData.rating,
+      statusString: this.state.userData.statusString
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "/",
+      data: data
+    })
     e.preventDefault();
   }
 
@@ -43,23 +60,44 @@ class JobDetail extends Component {
         <h1>Job detail page</h1>
         <form onSubmit={this.handleSubmit}>
           Title:
-          <input type="text" placeholder={this.state.userData.title} />
+          <input type="text"
+          placeholder={this.state.userData.title}
+          value={this.state.userData.title}
+          onChange={this.handleChange}
+          />
           <br/>
 
           Company Name:
-          <input type="text" placeholder={this.state.userData.companyName} />
+          <input type="text"
+          placeholder={this.state.userData.companyName}
+          value={this.state.userData.companyName}
+          onChange={this.handleChange}
+          />
           <br />
 
           Skills:
-          <input type="text" size="40" placeholder={this.state.userData.skills} />
+          <input type="text"
+          size="40"
+          placeholder={this.state.userData.skills}
+          value={this.state.userData.skills}
+          onChange={this.handleChange}
+          />
           <br />
 
           Rating:
-          <input type="text" placeholder={this.state.userData.rating} />
+          <input type="text"
+          placeholder={this.state.userData.rating}
+          value={this.state.userData.rating}
+          onChange={this.handleChange}
+          />
           <br />
 
           Status Streeng:
-          <input type="text" placeholder={this.state.userData.statusString} />
+          <input type="text"
+          placeholder={this.state.userData.statusString}
+          value={this.state.userData.statusString}
+          onChange={this.handleChange}
+          />
           <br />
 
           {/*}

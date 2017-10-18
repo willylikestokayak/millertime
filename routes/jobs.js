@@ -1,4 +1,4 @@
-var express = require('express');
+ var express = require('express');
 var mongoose = require("mongoose");
 var Job = require("../models/job");
 var User = require("../models/user");
@@ -28,7 +28,7 @@ router.get('/', function(req, res, next) {
         if (err) return console.log(err);
         res.send(job);
     })
-        
+
   });
   // Job.find({}, function(err, jobs) {
   //   if (err) return console.log(err);
