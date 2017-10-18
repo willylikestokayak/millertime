@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import App from './App.js';
-
-
 
 class UserDetail extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
         user: {
           name: "Beavis",
@@ -15,15 +12,17 @@ class UserDetail extends Component {
         },
         brandingStatementToUpdate: '',
         unicornToUpdate: ''
-
-    },
+    }
     this.handleBrandingStatement = this.handleBrandingStatement.bind(this);
     this.updateBranding = this.updateBranding.bind(this);
     // console.log("aljfa;ljfa;lgjas; should say beavis .... " + this.state.user.name);
   }
 
   handleBrandingStatement(e){
-   this.state.brandingStatementToUpdate = e.target.value;
+    // var getBrand = e.target.value;
+    this.setState({
+      brandingStatementToUpdate: e.target.value
+    })
   //  console.log("....................................." + this.state.user.email);
   }
 
