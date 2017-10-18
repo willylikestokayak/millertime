@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import UserDetail from './UserDetail';
+import './App.css';
+
+
 import JobList from './JobList.js';
 import JobDetail from './JobDetail.js';
 import UserDetail from './UserDetail.js';
@@ -74,8 +78,12 @@ class App extends Component {
                   <div className="page-header">
                     <h3>Admin</h3>
                   </div>
+<<<<<<< HEAD
+                  < UserDetail />
+=======
                   <Route exact path="/jobDetailRoute" component={JobDetail} />
                   <Route exact path="/userDetailRoute" component={UserDetail} />
+>>>>>>> 483b2f80ac952fabcdf96f1dd1199cc66e46fa21
                 </div>
                 <div className="col-md-12 footer">
                   <ul className="nav navbar-nav">A Project Inspired by Beth Miller, Cooked Up By: Chad Coker, Brian Conner, Reggie Baker & Tony Bricca</ul>
