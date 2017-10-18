@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import App from './App.js';
 
-<<<<<<< HEAD
-
-   
-=======
 class JobDetail extends Component {
   constructor(props) {
     super(props)
-    {/* where are the initial states coming from?? */}
+    //where are the initial states coming from??
     this.state = {
       value: "",
       name: "Reggie",
@@ -20,20 +15,19 @@ class JobDetail extends Component {
         statusString: "applied"
       }
     }
-
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(newProp) {
-    {/* These props will be piped in on the rerendering of the parent component
-      so they will be changing pretty constantly */}
+    // { These props will be piped in on the rerendering of the parent component
+    //   so they will be changing pretty constantly }
 
-      {/* this.setState = {title: newProp.title,
-              companyName: newProp.companyName,
-              skills: newProp.skills,
-              rating: newProp.rating,
-              statusString: newProp.statusString
-      } */}
+      // { this.setState = {title: newProp.title,
+      //         companyName: newProp.companyName,
+      //         skills: newProp.skills,
+      //         rating: newProp.rating,
+      //         statusString: newProp.statusString
+      // } }
     console.log("receivingPROPS")
   }
 
@@ -41,23 +35,23 @@ class JobDetail extends Component {
     this.setState({value: e.target.value});
   }
 
-  handleSubmit(e) {
-    {/* make the db call to update everything when the button is pressed  */}
-    var data: {
-      title: this.state.userData.title,
-      companyName: this.state.userData.companyName,
-      skills: this.state.userData.skills,
-      rating: this.state.userData.rating,
-      statusString: this.state.userData.statusString
-    }
+  // handleSubmit(e) {
+  //   {/* make the db call to update everything when the button is pressed  */}
+  //   var data: {
+  //     title: this.state.userData.title,
+  //     companyName: this.state.userData.companyName,
+  //     skills: this.state.userData.skills,
+  //     rating: this.state.userData.rating,
+  //     statusString: this.state.userData.statusString
+  //   }
 
-    $.ajax({
-      type: "POST",
-      url: "/",
-      data: data
-    })
-    e.preventDefault();
-  }
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "/",
+  //     data: data
+  //   })
+  //   e.preventDefault();
+  // }
 
   render() {
     return(
@@ -128,4 +122,3 @@ class JobDetail extends Component {
 }
 
 export default JobDetail;
->>>>>>> 483b2f80ac952fabcdf96f1dd1199cc66e46fa21

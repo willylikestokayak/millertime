@@ -24,10 +24,10 @@ class JobList extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    var newjobs = this.props.jobs;
-      this.setState({
-      jobs: nextProps.jobs
-    })
+    // var newjobs = this.props.jobs;
+    //   this.setState({
+    //   jobs: newJobs
+    // })
   }
 
 
@@ -36,15 +36,15 @@ class JobList extends Component {
     return (
     	<div>
 			<ul className="nav list-group">
-				{this.state.jobs.map((job,index) => {
+				{this.props.jobs.map((job,index) => {
 					return(
 						<li key={index}>
-        	        	    <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>
-        	        	    <div><span className="col md 4">Title: </span><span>{job.title}</span></div>
-        	        	    <div><span className="col md 4">Company: </span><span>{job.companyName}</span></div>
-        	        	    <div><span className="col md 4">Rating: </span><span>{job.rating}</span></div>
-        	        	    </a>
-        	        	</li>
+        	       <a className="list-group-item"><i className="icon-home icon-1x"></i>
+        	       <div><span className="col md 4">Title: </span><span>{job.title}</span></div>
+        	       <div><span className="col md 4">Company: </span><span>{job.companyName}</span></div>
+        	       <div><span className="col md 4">Rating: </span><span>{job.rating}</span></div>
+        	       </a>
+        	   </li>
 					)
 				})}
 			</ul>

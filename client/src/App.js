@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import UserDetail from './UserDetail';
 import './App.css';
-
-
 import JobList from './JobList.js';
 import JobDetail from './JobDetail.js';
-import UserDetail from './UserDetail.js';
 import Headline from './Headline.js';
 import './App.css';
 import {
@@ -45,7 +42,7 @@ class App extends Component {
               <button className="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <i className="icon-reorder"></i>
               </button>
-              <a className="navbar-brand" href="#">Beth Miller Time</a>
+              <a className="navbar-brand">Beth Miller Time</a>
             </div>
             <nav className="collapse navbar-collapse">
               <ul className="nav navbar-nav">
@@ -58,9 +55,9 @@ class App extends Component {
               </ul>
               <ul className="nav navbar-nav pull-right">
                 <li className="dropdown">
-                  <a href="#" id="nbAcctDD" className="dropdown-toggle" data-toggle="dropdown"><i className="icon-user"></i>Username<i className="icon-sort-down"></i></a>
+                  <a id="nbAcctDD" className="dropdown-toggle" data-toggle="dropdown"><i className="icon-user"></i>Username<i className="icon-sort-down"></i></a>
                   <ul className="dropdown-menu pull-right">
-                    <li><a href="#">Log Out</a></li>
+                    <li><a>Log Out</a></li>
                   </ul>
                 </li>
               </ul>
@@ -78,12 +75,8 @@ class App extends Component {
                   <div className="page-header">
                     <h3>Admin</h3>
                   </div>
-<<<<<<< HEAD
-                  < UserDetail />
-=======
                   <Route exact path="/jobDetailRoute" component={JobDetail} />
                   <Route exact path="/userDetailRoute" component={UserDetail} />
->>>>>>> 483b2f80ac952fabcdf96f1dd1199cc66e46fa21
                 </div>
                 <div className="col-md-12 footer">
                   <ul className="nav navbar-nav">A Project Inspired by Beth Miller, Cooked Up By: Chad Coker, Brian Conner, Reggie Baker & Tony Bricca</ul>
