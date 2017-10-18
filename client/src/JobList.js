@@ -6,34 +6,33 @@ class JobList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      jobs: [
-     	{
-        	title: "Junior Dev",
-        	companyName: "Google",
-        	skills: "HTML, CSS, JS, React, hipster vibes",
-        	rating: "Unicorn",
-        	statusString: "applied",
-    	}, {
-        	title: "Junior Dev",
-        	companyName: "FaceBooks",
-        	skills: "HTML, CSS, JS, React, hipster vibes",
-        	rating: "Unicorn",
-        	statusString: "applied",
-    	}],
+      jobs: [],
     	selectedJob:{}
     }
   }
 
-  // componentDidMount() {
-  // 	//fetch joblist from db
-  // }
+
+  handleAddJobClick(e){
+    fetch("/jobs/addjob")
+    .then((r) => r.json())
+    .then((r) => {
+      this.setState({
+        selectedJob: r
+      })
+    })
+    this.forceUpdate();
+  }
 
   componentWillReceiveProps(nextProps) {
-  	console.log(nextProps);
+    var newjobs = this.props.jobs;
+      this.setState({
+      jobs: nextProps.jobs
+    })
   }
 
 
   render() {
+    console.log("JOBLISTSTATE",this.state)
     return (
     	<div>
 			<ul className="nav list-group">
@@ -49,7 +48,7 @@ class JobList extends Component {
 					)
 				})}
 			</ul>
-			<div className="text-center"><button>Add Job</button></div>
+			<div className="text-center"><button onClick={(e) => this.handleAddJobClick(e)}>Add Job</button></div>
 		</div>
     );
   }
