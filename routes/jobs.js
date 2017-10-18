@@ -5,6 +5,7 @@ var User = require("../models/user");
 var router = express.Router();
 // router.use()
 router.get('/', function(req, res, next) {
+
   User.create({
     name: "Beavis",
     email: "thegreatcornholio@teepee.bm",
