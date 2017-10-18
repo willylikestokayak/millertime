@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import UserDetail from './UserDetail';
 import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -69,7 +71,7 @@ class App extends Component {
                   <div class="page-header">
                     <h3>Admin</h3>
                   </div>
-                  <p>Lorem Ipsum...</p>
+                  < UserDetail />
                 </div>
 
                 <div class="col-md-12 footer">
