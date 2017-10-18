@@ -2,26 +2,37 @@ import React, { Component } from 'react';
 import JobList from './JobList.js';
 import JobDetail from './JobDetail.js';
 import UserDetail from './UserDetail.js';
-//import Headline from './Headline.js';
+import Headline from './Headline.js';
 import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      jobs:[],
       activeJob:''
     }
   }
+ 
   componentDidMount() {
-    fetch("/jobs")
-      .then(response => response.json())
-      .then(response => this.setState({jobs: response}))
+    fetch("/jobs/joblist")
+    .then((r) => r.json())
+    .then((r) => {
+      let arr = r;
+      this.setState({
+        jobs: arr
+      })
+    })
   }
+  
+
   render() {
+    console.log("APPSTATE", this.state)
     return (
       <Router>
         <div>
@@ -54,7 +65,8 @@ class App extends Component {
           <div id="wrapper">
             <div id="sidebar-wrapper" className="col-md-2">
                 <div id="sidebar">
-                    <JobList activeJob={this.state.activeJob}/>
+                    <Headline />
+                    <JobList activeJob={this.state.activeJob} jobs={this.state.jobs}/>
                 </div>
               </div>
               <div id="main-wrapper" className="col-md-10 pull-right">
