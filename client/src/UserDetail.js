@@ -29,8 +29,7 @@ class UserDetail extends Component {
     e.preventDefault()
     var temp;
     temp = this.state.user;
-    {/*temp.brandingStatement=brandingStatementToUpdate;*/}
-
+    temp.brandingStatement=brandingStatementToUpdate;
     this.setState({
     user: temp
   });

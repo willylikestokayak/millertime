@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import App from './App.js';
 
-<<<<<<< HEAD
 
    
-=======
 class JobDetail extends Component {
   constructor(props) {
     super(props)
@@ -82,4 +80,3 @@ class JobDetail extends Component {
 }
 
 export default JobDetail;
->>>>>>> 483b2f80ac952fabcdf96f1dd1199cc66e46fa21
