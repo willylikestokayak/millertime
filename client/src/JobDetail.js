@@ -28,12 +28,12 @@ class JobDetail extends Component {
     {/* These props will be piped in on the rerendering of the parent component
       so they will be changing pretty constantly */}
 
-      this.setState = {title: newProp.title,
+      {/* this.setState = {title: newProp.title,
               companyName: newProp.companyName,
               skills: newProp.skills,
               rating: newProp.rating,
               statusString: newProp.statusString
-      }
+      } */}
     console.log("receivingPROPS")
   }
 
