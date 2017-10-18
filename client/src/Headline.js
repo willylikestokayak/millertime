@@ -23,8 +23,10 @@ class Headline extends Component {
         }
     render() {
         return(
-            <div id="sidebar">
-                Merr
+            //Tony don't change the className of the DIV....let's talk in the morning
+            <div>
+                HEADER GONNA GO HERE
+
             </div>
 
         )    
