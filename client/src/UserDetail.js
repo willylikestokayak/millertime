@@ -18,18 +18,18 @@ class UserDetail extends Component {
 
     },
     this.handleBrandingStatement = this.handleBrandingStatement.bind(this);
-    
+
   }
 
   handleBrandingStatement(e){
-   this.state.brandingStatementToUpdate = e.target.value; 
+   this.state.brandingStatementToUpdate = e.target.value;
   }
 
   updateBranding(e){
     e.preventDefault()
     var temp;
     temp = this.state.user;
-    temp.brandingStatement=brandingStatementToUpdate;
+    {/*temp.brandingStatement=brandingStatementToUpdate;*/}
 
     this.setState({
     user: temp
@@ -37,7 +37,7 @@ class UserDetail extends Component {
   // handleUnicorn(e){
 
   // }
-  // this.brandingStatementToUpdate = this.brandingStatementToUpdate.bind(this);  
+  // this.brandingStatementToUpdate = this.brandingStatementToUpdate.bind(this);
 }
 
   render() {
@@ -48,8 +48,8 @@ class UserDetail extends Component {
             <form>
                 <input type="text" placeholder='edit brand statement' onChange={(e)=> this.handleBrandingStatement(e)} />
                 {/* <input type="text" placeholder='what makes your unicorn'/>     */}
-                <button onClick={(e) => this.brandingStatementToUpdate(e)}>Save</button>   
-                
+                <button onClick={(e) => this.brandingStatementToUpdate(e)}>Save</button>
+
             </form>
         </div>
     )
