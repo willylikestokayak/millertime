@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import UserDetail from './UserDetail';
 import './App.css';
 
 
-=======
 import JobList from './JobList.js';
 import JobDetail from './JobDetail.js';
 import UserDetail from './UserDetail.js';
@@ -15,7 +13,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
->>>>>>> 483b2f80ac952fabcdf96f1dd1199cc66e46fa21
 class App extends Component {
   constructor(props) {
     super(props)
