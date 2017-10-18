@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import JobList from './JobList.js';
 import JobDetail from './JobDetail.js';
 import UserDetail from './UserDetail.js';
-//import Headline from './Headline.js';
+import Headline from './Headline.js';
 import './App.css';
 import {
   BrowserRouter as Router,
