@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import UserDetail from './UserDetail';
-import './App.css';
 import JobList from './JobList.js';
 import JobDetail from './JobDetail.js';
+import UserDetail from './UserDetail.js';
 import Headline from './Headline.js';
 import './App.css';
 import {
@@ -16,10 +15,20 @@ class App extends Component {
     super(props)
     this.state = {
       jobs:[],
-      activeJob:''
+      activeJob: {}
     }
+    this.updateActiveJob = this.updateActiveJob.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
  
+  //accepts job...from child
+  updateActiveJob(index){
+    var newActiveJob = this.state.jobs[index.index];
+    this.setState({
+      activeJob:newActiveJob
+    })
+  }
+
   componentDidMount() {
     fetch("/jobs/joblist")
     .then((r) => r.json())
@@ -31,7 +40,6 @@ class App extends Component {
     })
   }
   
-
   render() {
     console.log("APPSTATE", this.state)
     return (
@@ -67,7 +75,12 @@ class App extends Component {
             <div id="sidebar-wrapper" className="col-md-2">
                 <div id="sidebar">
                     <Headline />
-                    <JobList activeJob={this.state.activeJob} jobs={this.state.jobs}/>
+                    <JobList 
+                      activeJob={this.state.activeJob} 
+                      jobs={this.state.jobs} 
+                      updateActiveJob={this.updateActiveJob}
+                      componentDidMount={this.componentDidMount}
+                      />
                 </div>
               </div>
               <div id="main-wrapper" className="col-md-10 pull-right">
