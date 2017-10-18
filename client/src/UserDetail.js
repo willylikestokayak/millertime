@@ -8,29 +8,32 @@ class UserDetail extends Component {
     super(props)
     this.state = {
         user: {
-        name: "Beavis",
-        email: "thegreatcornholio@teepee.bm",
-        brandingStatement: "Hey, Butt-head, this website kicks ass.",
-        unicornJob: "Whoa, unicorns are cool.  Heh heh."
+          name: "Beavis",
+          email: "thegreatcornholio@teepee.bm",
+          brandingStatement: "Hey, Butt-head, this website kicks ass.",
+          unicornJob: "Whoa, unicorns are cool.  Heh heh."
         },
         brandingStatementToUpdate: '',
         unicornToUpdate: ''
 
     },
     this.handleBrandingStatement = this.handleBrandingStatement.bind(this);
-
+    this.updateBranding = this.updateBranding.bind(this);
+    // console.log("aljfa;ljfa;lgjas; should say beavis .... " + this.state.user.name);
   }
 
   handleBrandingStatement(e){
    this.state.brandingStatementToUpdate = e.target.value;
+  //  console.log("....................................." + this.state.user.email);
   }
 
   updateBranding(e){
+    console.log("lkdslfja;ldkfjas;ldkfj" + this.state);
     e.preventDefault()
     var temp;
     temp = this.state.user;
-    {/*temp.brandingStatement=brandingStatementToUpdate;*/}
-
+    console.log("this is the temp var" + temp);
+    temp.brandingStatement = this.state.brandingStatementToUpdate;
     this.setState({
     user: temp
   });
@@ -41,15 +44,16 @@ class UserDetail extends Component {
 }
 
   render() {
-    console.log(this.state);
+    console.log(this.state.user, "more things to be here");
     return (
         <div>
-            <h1>{this.state.brandingStatement}</h1>
-            <form>
-                <input type="text" placeholder='edit brand statement' onChange={(e)=> this.handleBrandingStatement(e)} />
+            <h1>Keep BethBot happy: evolve your brand and vision</h1>
+            <form onSubmit = {this.updateBranding}>
+              Update Your Branding Statement:
+                <input type="text" placeholder={this.state.user.brandingStatement} onChange={(e)=> this.handleBrandingStatement(e)} />
                 {/* <input type="text" placeholder='what makes your unicorn'/>     */}
-                <button onClick={(e) => this.brandingStatementToUpdate(e)}>Save</button>
-
+                {/* <button onClick={(e) => this.brandingStatementToUpdate(e)}>Save</button> */}
+                <input type="submit" value="submit edits" />
             </form>
         </div>
     )
